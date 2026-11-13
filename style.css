@@ -321,65 +321,6 @@ section h2 {
     transform: scale(1.03);
 }
 
-/* FORMULARIO DE CONTACTO */
-#contacto {
-    background-color: white;
-}
-
-.formulario {
-    max-width: 700px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.fila {
-    display: flex;
-    gap: 20px;
-}
-
-input,
-textarea {
-    width: 100%;
-    padding: 14px;
-    border: 1px solid #cbd5e1;
-    border-radius: 10px;
-    background-color: var(--fondo-web);
-    font-family: inherit;
-    font-size: 15px;
-    color: var(--texto-oscuro);
-    outline: none;
-    transition: 0.3s;
-}
-
-input:focus,
-textarea:focus {
-    border-color: var(--azul-principal);
-    box-shadow: 0 0 0 3px rgba(11, 37, 69, 0.1);
-}
-
-textarea {
-    min-height: 150px;
-    resize: vertical;
-}
-
-.btn-enviar {
-    background-color: var(--azul-principal);
-    color: white;
-    border: none;
-    padding: 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: 0.3s;
-    font-weight: 600;
-    font-size: 16px;
-}
-
-.btn-enviar:hover {
-    background-color: var(--azul-secundario);
-}
-
 /* FOOTER */
 footer {
     background-color: var(--azul-principal);
@@ -553,4 +494,71 @@ footer p {
 
 .titulo-destacado:hover {
     transform: translateY(-3px) scale(1.01);
+}
+
+/* =====================================
+   ESTILOS PARA EL NUEVO FORMULARIO DE CONTACTO
+   ===================================== */
+
+.formulario {
+    max-width: 700px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.fila {
+    display: flex;
+    gap: 20px;
+}
+
+.formulario input,
+.formulario textarea {
+    width: 100%;
+    padding: 15px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    color: var(--texto-oscuro);
+    background-color: var(--lavanda-suave);
+    transition: 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+    outline: none;
+    border-color: var(--azul-principal);
+    background-color: white;
+    box-shadow: 0 0 0 4px rgba(11, 37, 69, 0.1);
+}
+
+.formulario textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+/* Reutilizamos la misma línea visual y elegante de tus botones */
+.formulario .btn-enviar {
+    display: inline-block;
+    background-color: var(--azul-principal);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 12px rgba(11, 37, 69, 0.2);
+    width: 100%;
+    text-align: center;
+}
+
+.formulario .btn-enviar:hover {
+    background-color: var(--azul-secundario);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(11, 37, 69, 0.3);
 }

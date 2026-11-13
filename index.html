@@ -248,24 +248,35 @@
             </div>
         </section>
 
-        <!-- CONTACTO -->
+    <!-- CONTACTO -->
         <section id="contacto" style="background-color: white;">
             <h2>Contacto y Reservas</h2>
             <p class="subtitulo-contacto">Escribime y te comparto un video para que conozcas mejor nuestro espacio. ¿Querés reservar una estadía? ¡Escribime y coordinamos lo que necesites!</p>
             
-            <form action="https://formspree.io/f/mykvbbnb" method="POST" class="formulario" id="formulario">
+            <!-- Iframe oculto para enviar a Google Forms sin salir de la página -->
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { mostrarMensajeExito(); }"></iframe>
+
+            <form action="https://docs.google.com/forms/d/e/1FAIpQLScH3o9Hm0WZoPCG5xV9bXp1x3mR0L57QIwPFl5s-_V3uplzTg/formResponse" 
+                  method="POST" 
+                  target="hidden_iframe" 
+                  onsubmit="submitted=true;" 
+                  class="formulario" 
+                  id="formulario">
                 <div class="fila">
-                    <input type="text" id="nombre" name="nombre" placeholder="Nombre y Apellido" autocomplete="name" required>
-                    <input type="email" id="email" name="email" placeholder="Correo electrónico" autocomplete="email" required>
+                    <input type="text" id="nombre" name="entry.539381907" placeholder="Nombre y Apellido" autocomplete="name" required>
+                    <input type="email" id="email" name="entry.359332662" placeholder="Correo electrónico" autocomplete="email" required>
                 </div>
-                <textarea id="mensaje" name="mensaje" placeholder="Contanos sobre tu perro (raza, edad) y fechas de consulta..." required></textarea>
+                <textarea id="mensaje" name="entry.585001354" placeholder="Contanos sobre tu perro (raza, edad) y fechas de consulta..." required></textarea>
                 <button type="submit" class="btn-enviar">
                     Enviar mensaje
                 </button>
             </form>
-        </section>
 
-    </main>
+            <!-- Mensaje de confirmación al enviar -->
+            <div id="mensaje-exito" style="display: none; text-align: center; padding: 20px; margin-top: 15px; background-color: #e8f8f0; color: #1b5e20; border-radius: 10px; font-weight: 500;">
+                ¡Gracias por escribirnos! Ya recibimos tu consulta y te contactamos pronto. 🐾
+            </div>
+        </section>
 
     <!-- FOOTER -->
     <footer>
