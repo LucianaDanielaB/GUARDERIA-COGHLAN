@@ -562,3 +562,84 @@ footer p {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(11, 37, 69, 0.3);
 }
+
+/* =====================================
+   ESTILOS EFECTO CALESITA / LOOP CONTINUO
+   ===================================== */
+
+.calesita-contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    /* Difuminado sutil a los costados para que quede ultra profesional */
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.calesita-track {
+    display: flex;
+    gap: 25px;
+    width: max-content;
+    /* Aquí definís la velocidad: a mayor cantidad de segundos, más lento y controlado se mueve */
+    animation: desplazarCalesita 35s linear infinite;
+}
+
+/* Se pausa automáticamente si el usuario apoya el mouse para leer tranquilo */
+.calesita-contenedor:hover .calesita-track {
+    animation-play-state: paused;
+}
+
+.calesita-card {
+    flex: 0 0 330px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+    border-top: 4px solid var(--azul-principal);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.testimonio-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #edf2f7;
+    padding-top: 12px;
+    margin-top: 15px;
+}
+
+.testimonio-fecha {
+    font-size: 12px;
+    color: #a0aec0;
+    font-weight: 500;
+}
+
+.calesita-card h4 {
+    font-size: 15px;
+    color: var(--azul-principal);
+    font-weight: 600;
+    margin: 0;
+}
+
+.calesita-card p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--texto-suave);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+/* Animación continua de la calesita */
+@keyframes desplazarCalesita {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Se desplaza exactamente el ancho del primer bloque completo de 6 tarjetas */
+        transform: translateX(calc(-50% - 12.5px));
+    }
+}

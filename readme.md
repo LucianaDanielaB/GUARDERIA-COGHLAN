@@ -2,7 +2,7 @@
 
 Sitio web desarrollado como proyecto para el curso de desarrollo web.
 
-El proyecto representa una página para una guardería canina y servicio de paseos, mostrando información sobre los servicios, galería de imágenes, formulario de contacto y redes sociales.
+El proyecto representa una página para una guardería canina y servicio de paseos, mostrando información sobre los servicios, galería de imágenes, calesita de testimonios con fechas reales, formulario de contacto y redes sociales.
 
 ---
 
@@ -13,6 +13,7 @@ El proyecto representa una página para una guardería canina y servicio de pase
 - Flexbox
 - CSS Grid
 - Media Queries
+- CSS Animations (Keyframes / Calesita infinita)
 - Formspree
 
 ---
@@ -21,6 +22,7 @@ El proyecto representa una página para una guardería canina y servicio de pase
 
 - Diseño responsive adaptable a dispositivos móviles
 - Navegación interna entre secciones
+- Calesita de recomendaciones en loop infinito con pausa interactiva al pasar el mouse
 - Formulario de contacto funcional
 - Integración con Instagram
 - Botón flotante de WhatsApp
@@ -33,17 +35,19 @@ El proyecto representa una página para una guardería canina y servicio de pase
 ## Estructura del sitio
 
 - Inicio
-- Sobre nosotros
-- Servicios
+- Nos destaca
+- Comodidades
+- Seguridad
+- Valores
 - Galería
-- Reseñas
+- Recomendaciones
 - Contacto
 
 ---
 
 ## Objetivo
 
-El objetivo del proyecto fue desarrollar un sitio web funcional aplicando conceptos básicos de desarrollo front-end y diseño responsive.
+El objetivo del proyecto fue desarrollar un sitio web funcional aplicando conceptos de desarrollo front-end, diseño responsive e interactividad avanzada.
 
 ---
 
