@@ -9,16 +9,18 @@ function mostrarMensajeExito() {
 // ==========================================
 // CONTROLADOR DEL CARRUSEL DE TESTIMONIOS
 // ==========================================
-function moverCarrusel(direccion) {
-    const track = document.getElementById('trackRecomendaciones');
-    if (!track) return;
-    
-    // Ancho exacto de una sola tarjeta (330px) + el espacio del gap (25px) = 355px
-    // Esto asegura que avance exactamente de a un testimonio por vez de forma suave y controlada
-    const anchoTarjeta = 355; 
-    
-    track.scrollBy({
-        left: direccion * anchoTarjeta,
-        behavior: 'smooth' // Desplazamiento animado, lento y elegante
+function moverRecomendacion(direccion) {
+    const pista = document.getElementById('pistaRecomendaciones');
+    if (!pista) return;
+
+    const primeraTarjeta = pista.querySelector('.tarjeta-recomendacion');
+    if (!primeraTarjeta) return;
+
+    const gap = parseFloat(window.getComputedStyle(pista).gap) || 24;
+    const paso = primeraTarjeta.getBoundingClientRect().width + gap;
+
+    pista.scrollBy({
+        left: direccion * paso,
+        behavior: 'smooth'
     });
 }
